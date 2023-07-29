@@ -1,0 +1,18 @@
+{% load static %}
+
+<div class="col">
+	<form class="container" id="imageForm"> {% csrf_token %}
+		<div class="row row-cols-1 justify-content-center my-3">
+			<div class="col">
+				<label for="imageFile" class="form-label"></label>
+				<input class="form-control" type="file" accept="image/*" id="imageFile"
+					name="imageFile">
+			</div>
+		</div>
+		<div class="row row-cols-1 justify-content-center my-3">
+			<div class="col">
+				<button type="submit" class="btn btn-primary btn-lg container-fluid">Submit</button>
+			</div>
+		</div>
+	</form>
+</div>

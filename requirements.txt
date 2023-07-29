@@ -1,0 +1,22 @@
+# Data Handling
+opencv-contrib-python
+
+# OCR
+pytesseract
+
+# Models
+deepface
+transformers
+
+# File handling
+python-dotenv
+
+# Web
+django
+
+# GUI
+flaskwebgui
+waitress
+
+# Custom
+-e .

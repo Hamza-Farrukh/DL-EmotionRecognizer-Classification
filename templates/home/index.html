@@ -1,0 +1,50 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block 'body' %}
+<div class="row mx-3 my-3">
+  <div class="col-9 text-dark my-3">
+    <h1><u>Emotion Recognizer</u></h1>
+  </div>
+  <div class="col-3 text-light my-3 text-end">
+    <a href="{% url 'login' %}">
+      <button type="button"
+        class="btn btn-secondary bg-dark btn-md btn-block logout-btn">Logout</button>
+    </a>
+  </div>
+</div>
+<div class="container">
+  <div class="row row-cols-1 text-dark text-center my-3 ">
+    <div class="col">
+      <h3>Upload the image here</h3>
+    </div>
+  </div>
+
+  <div class="row row-cols-1 text-dark text-center justify-content-center my-3">
+    <div class="col">
+      <a href="{% static 'assets/images/emotion_logo.png' %}" id="imageURL"><img src="{% static 'assets/images/emotion_logo.png' %}" alt="Image" id="image" height="250" width="250"></a>
+    </div>
+  </div>
+
+  <div class="row row-cols-3 text-dark text-center justify-content-center my-3">
+    {%include 'emotion_recognizer/inputs.html' %}
+  </div>
+
+  <div class="row row-cols-1 text-dark text-center justify-content-centermy-3">
+    <div class="col">
+      <h3 id="resultHeading">Detected Emotion</h3>
+    </div>
+  </div>
+
+  <div class="row row-cols-1 text-dark text-center justify-content-center my-3">
+    <div class="col">
+      <h3 id="result"></h3>
+    </div>
+  </div>
+</div>
+{% endblock 'body' %}
+
+{% block 'JS' %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="{% static 'assets/js/image.js' %}"></script>
+{% endblock 'JS' %}
